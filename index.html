@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homework 7 - Validador de correos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-6 mx-auto mt-4">
+        <h3>Validación Institucional</h3>
+
+        <div class="jumbotron">
+          <p>
+            Patrón:
+            <strong
+              >nombre.apellido.[año > 2018 && año <=2020]@[extensión
+              educativa]</strong
+            >
+          </p>
+          <form onsubmit="return handleValidarCorreo(event)">
+            <div class="form-group">
+              <label for="correoInstitucional">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="correoInstitucional"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+            <center>
+              <button
+                id="validarInstitucional"
+                type="submit"
+                class="btn btn-primary"
+              >
+                Validar
+              </button>
+            </center>
+          </form>
+          <div id="resultadoInstitucional"></div>
+        </div>
+
+        <h3>Validación Comercial Colombiana</h3>
+        <div class="jumbotron">
+          <p>
+            Patrón:
+            <strong
+              >[año > 2018].nombre.apellido @[extensión comercial
+              colombia]</strong
+            >
+          </p>
+          <form onsubmit="return handleValidarCorreo(event)">
+            <div class="form-group">
+              <label for="correoComercial">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="correoComercial"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+            <center>
+              <button
+                type="submit"
+                id="validarComercial"
+                class="btn btn-primary"
+              >
+                Validar
+              </button>
+            </center>
+          </form>
+          <div id="resultadoComercial"></div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <footer>
+        <div class="container">
+          <h5>
+            <a href="https://github.com/LuisFuenTech" target="_blank"
+              >Luis Fuentes</a
+            >
+            - <a href="#">Maicol Vergara</a> - <a href="#">Alfonso Mieles</a> |
+            Universidad De Cartagena
+            <year id="year"></year>
+          </h5>
+        </div>
+      </footer>
+    </center>
+  </body>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</html>
