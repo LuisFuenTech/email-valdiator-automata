@@ -45,7 +45,7 @@ function handleValidarCorreo(event) {
 
   if (tipo === 'validarComercial') {
     const regex = new RegExp(
-      /^((([2-9][0-9])(19|[2-9][0-9]))\.([a-z]+)\.([a-z]+))@(([a-z]+)\.(com)\.(co))$/
+      /^((2019|20[2-9][0-9]|2[1-9][0-9]{2}|[3-9][0-9]{3})\.([a-z]+)\.([a-z]+))@(([a-z]+)\.(com)\.(co))$/
     );
 
     const correo = document.getElementById('correoComercial').value;
